@@ -1,0 +1,375 @@
+
+/**
+All styling is inside this file.
+
+*/
+html,body {
+    width: 100%;
+    min-width: 700px;
+    height: 100%;
+    margin: 0 auto;
+    overflow-y: scroll;
+/*     background-color: floralwhite;
+ */    font-family: arial;
+}
+
+.mheader {
+    width: 100%;
+    height: 15%;
+   /*  background-color: darkgreen; */
+   background-color: rgb(187, 197, 178);
+    box-shadow: 5px 10px #333;
+    
+    border-radius: 12px;
+    
+    
+}
+
+.mheader img {
+    margin: 8px;
+    float: left;
+    max-height: 90%;
+}
+
+.mheader h1 {
+    font-size: 54px;
+    position: relative;
+    top: 25%;
+    bottom: 25%;
+    left: 20%;
+    right: 20%;
+    color: white;
+    
+    
+    
+}
+
+.body {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin: 16px 0;
+    background-position: center;
+
+   
+    text-align: center;
+    
+}
+#img-background {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    right: 5%;
+    bottom: 1px;
+    
+    margin: 0 auto;
+    z-index: 10;
+    
+    min-width: 60%;
+    height: auto;
+    
+    opacity: 0.5;
+    background-image: url("images/test.png");
+    background-repeat: no-repeat;
+    background-size:cover;
+    
+   
+
+}
+
+.body div {
+    position: relative;
+    opacity: 1;
+    z-index: 100;
+    width: 100%;
+    height: 70%;
+    
+}
+
+.body .tests-list  li {
+    display: block;
+    width: 400px;
+   /*  font-size: 36px; */
+    text-decoration: none;
+    color: black;
+    margin: 16px auto;
+    color: #333;
+    border-radius: 12px;
+    font-weight: bold;
+    list-style-type:none;
+    cursor: pointer;
+}
+.body .tests-list  li:hover {
+    background-color:  rgb(187, 197, 178);;
+    
+}
+.tests-list {
+    
+    position: relative;
+    top:5%;
+    right : auto;
+    left: auto;
+    margin-right: 16px;
+    
+    text-align: center;
+    
+    
+    
+  
+}
+
+#info {
+    position: relative;
+    margin-top: 64px;
+    height: 600px;
+
+}
+.mcq-1 , .mcq-2 {
+    position: relative;
+    top: 15%;
+    height: 600px;
+}
+
+#info label {
+    display: inline-block;
+    width: 180px;
+    height: 30px;
+    text-align: center;
+    font-size: 24px;
+    margin: 8px 4px;
+
+}
+
+#info input[type="text"],#info input[type="email"],#info input[type="number"] {
+    display: inline-block;
+    width: 200px;
+    height: 30px;
+    text-align: left;
+    font-size: 16px;
+    border: black 1px solid;
+    border-radius: 8px;
+    padding: 8px;
+    margin: 16px 0;
+    border: gray 2px groove;
+
+}
+
+ input[type="button"]{
+    margin: 16px 0 ;
+    font-size: 22px;
+    background-color: #333;
+    padding: 8px;
+    border-radius: 8px;
+    color: white;
+    
+}
+
+/* The question-container */
+.question-container {
+  display: block;
+  position: relative;
+  
+  padding: 4px;
+  border-radius: 4px;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  margin: 24px auto;
+  cursor: pointer;
+
+  
+  
+max-width: 65%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.question-container:hover {
+    background-color:  rgb(187, 197, 178);;
+}
+.question-container .choice {
+    color: #333;
+    font-size: 32px;
+    font-weight: bolder;
+    display: inline;
+    vertical-align: center;
+}
+
+/* Hide the browser's default checkbox */
+.question-container input {
+    vertical-align: center;
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    vertical-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.question-container:hover input ~ .checkmark {
+    vertical-align: center;
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.question-container input:checked ~ .checkmark {
+    vertical-align: center;
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    vertical-align: center;
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.question-container input:checked ~ .checkmark:after {
+    
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.question-container .checkmark:after {
+    vertical-align: center;
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#btn-next {
+   position: absolute;
+   right: 100px;
+   bottom: 0;
+   margin: 64px 16px;
+}
+#btn-back {
+    position: absolute;
+    left:100px;
+    bottom: 0;
+    margin: 64px 16px;
+    
+}
+
+.dropdown {
+    position: relative;
+    opacity: 1;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+   
+}
+
+
+#q1s1,#q1s2 , #q2s1,#q2s2 {
+    width: 180px;
+    display: inline-block;
+    margin: 0 4px;
+    padding-top: 12px;
+    padding-bottom: 4px;
+    border-bottom: gray 2px solid;
+    
+  }
+
+.dropdown ul {
+    position: absolute;
+    top: 25%;
+    list-style: none;
+    right: 5%;
+    left: 5%;
+    border: 1px grey solid;
+    box-shadow: 2px 2px lightgray;
+    background-color: burlywood;
+    border-radius: 4px;
+    padding: 10px;
+  }
+.dropdown  li {
+    display: inline-block;
+    margin: 0 4px;
+    padding: 10px;
+    background-color: gray;
+    border-radius: 16px;
+    font-size: 16px;
+    color: black;
+    font-weight: bold;
+    list-style-type:none 
+
+  }
+.dropdown p {
+    position: absolute;
+    display: inline-block;
+    font-weight: bolder;
+    font-size: 18px;
+    top: 50%;
+    bottom: 50%;
+    left: 5%;
+    right: 5%;
+    padding: 10px;
+  }
+  i.fa.fa-times {
+    cursor: pointer;
+    padding-left: 10px;
+    
+}
+#final-result {
+ width: 100%;
+ height: 100%;
+ margin: 0 auto;
+ 
+ text-align: center;
+}
+#report {
+    width: 70%;
+    height: 50%;
+    border-radius: 4px;
+    
+}
+#report, th , td {
+    border: 1px black solid;
+    margin: 0 auto;
+    font-size: 18px;
+}
+ tr {
+    opacity: 0.8;
+}
+tr:hover {
+    opacity: 1;
+}
+
+#sec3 {
+    background-color: #2F4F4F;
+}
+#sec2 {
+    background-color: #778899;
+}
+#sec1 {
+    background-color: #696969;
+}
+#chart1, #chart2 {
+    display: inline-block;
+    margin: 64px auto;
+    width: 800px !important;
+    height: 500px !important;
+    
+}
+
+  

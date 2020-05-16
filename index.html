@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<html>
+  <!-- This is the main page and the only page. It contains all html elements as 
+Empty tags and thos tags will get poppulated by the js code in main.js-->
+  <head>
+    <title>Main Page</title>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+
+    <!-- I used this link only for the x icon in the dropdown question-->
+    <link
+      href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/fomantic-ui/2.8.4/semantic.min.css"
+    />
+    <script src="jquery-3.4.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="main.js"></script>
+  </head>
+
+  <body>
+    <div class="mheader">
+      <img src="images/kfupm_logo.png" alt="logo" />
+
+      <h1>Mini-Test Center</h1>
+      <!-- <h6 id="points"> Collected Score <sub>For debugging</sub> : 0</h6> -->
+    </div>
+    <canvas id="chart1"> </canvas>
+    <canvas id="chart2"> </canvas>
+    <div class="body">
+      <div class="container">
+        <h2
+          id="prompt"
+          class="ui horizontal divider header"
+          style="margin-top: 64px;"
+        >
+          Choose A Test
+        </h2>
+        <ul class="tests-list">
+          <li><h2>KFUPM Loyality Test</h2></li>
+          <li><h2>Simple Math Test</h2></li>
+          <li><h2>اختبار رياضيات بسيط</h2></li>
+          <li><h2>Math 001 Test</h2></li>
+          <li><h2>Java Test</h2></li>
+        </ul>
+
+        <form id="info">
+          <label>Name:</label>
+          <input id="name" type="text" placeholder="Ahmed Mohammed" /><br />
+          <label>ID#:</label>
+          <input id="id" type="text" placeholder="s20xxxxxxx" /><br />
+          <label>KFUPM Mail:</label>
+          <input
+            id="email"
+            type="email"
+            placeholder="s20xxxxxxx@kfupm.edu.sa"
+            disabled
+          /><br />
+        </form>
+        <form id="mcq-1">
+          <h3 class="timer1"></h3>
+          <h2 class="quesiton">What is your name?</h2>
+          <label class="question-container cho"
+            ><span class="choice"
+              >This is an answer that is supposed to be somewhat long</span
+            >
+            <input type="checkbox" checked="checked" name="1" />
+            <span class="checkmark"></span>
+          </label>
+          <label class="question-container"
+            ><span class="choice"
+              >This is an answer that is supposed to be somewhat
+            </span>
+            <input type="checkbox" name="2" />
+            <span class="checkmark"></span>
+          </label>
+          <label class="question-container"
+            ><span class="choice">This is an answer that is supposed to </span>
+            <input type="checkbox" name="3" />
+            <span class="checkmark"></span>
+          </label>
+          <label class="question-container"
+            ><span class="choice">This is an answer that</span>
+            <input type="checkbox" name="4" />
+            <span class="checkmark"></span><br />
+          </label>
+        </form>
+        <div class="dropdown">
+          <h3 class="timer2"></h3>
+          <h5 class="attempts"></h5>
+
+          <ul id="options1">
+            <li class="ddq1"></li>
+            <li class="ddq1"></li>
+            <li class="ddq1"></li>
+            <li class="ddq1"></li>
+          </ul>
+          <p id="p1"></p>
+        </div>
+
+        <div class="dropdown">
+          <h3 class="timer2"></h3>
+          <h5 class="attempts"></h5>
+
+          <ul id="options2">
+            <li class="ddq2"></li>
+            <li class="ddq2"></li>
+            <li class="ddq2"></li>
+            <li class="ddq2"></li>
+          </ul>
+          <p id="p2"></p>
+        </div>
+
+        <input id="btn-back" type="button" value="Back" />
+        <input id="btn-next" type="button" value="Start Test" />
+        <div id="final-result">
+          <h2 id="score">sss</h2>
+          <table id="report" class="ui celled table">
+            <thead>
+              <tr>
+                <th>Question#</th>
+                <th>Scored Value</th>
+                <th>Question Full Score</th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+      </div>
+      <div id="img-background"></div>
+    </div>
+  </body>
+</html>
